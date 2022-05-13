@@ -1,0 +1,29 @@
+<div class="row row-cols-7 row-cols-md-5 row-cols-sm-3 mb-3 text-center">
+  <div *ngIf="listaItensPedido.length === 0" clas="row">
+    <p>Não há pedidos adicionados</p>
+  </div>
+
+  <div
+    class="card mb-4 rounded-3 shadow-sm"
+    *ngFor="let item of listaItensPedido"
+  >
+    <div class="card-header py-3">
+      <h4 class="my-0 fw-normal">{{ item?.titulo }}</h4>
+    </div>
+    <div class="card-body">
+      <img src="{{ item?.imagem }}" class="img-fluid" />
+      <h1 class="card-title pricing-card-title text-success">
+        R${{ item?.valor }}<small class="text-muted fw-light"></small>
+      </h1>
+
+      <!-- <button
+          onclick="alert('Adicionado')"
+          type="button"
+          class="w-100 btn btn-lg btn-outline-primary"
+          (click)="adicionarAoPedido()"
+        >
+          Adicionar ao pedido
+        </button> -->
+    </div>
+  </div>
+</div>

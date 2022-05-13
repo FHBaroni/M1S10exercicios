@@ -10,7 +10,7 @@ export class PedidoService {
 
   constructor() {}
 
-  getTotalItensPedido(): number {
+  buscarTotalItensPedido(): number {
     return this.itensPedidoLista.length;
   }
 
