@@ -19,6 +19,11 @@ export class PedidoService {
     console.log('itensPedidoLista', this.itensPedidoLista);
   }
 
+  adicionarItensPedido(item: comidas | bebidas, quantidade: number) {
+    const itens = Array(quantidade).fill(item);
+    this.itensPedidoLista.push(...itens);
+  }
+
   limparPedido() {
     this.itensPedidoLista = [];
   }

@@ -23,4 +23,11 @@ export class ComidaListaComponent implements OnInit {
   adicionarComida(comida: comidas) {
     this.pedidoService.adicionarItemPedido(comida);
   }
+
+  adicionarComidaComQuantidade(itemComQuantidade: any) {
+    this.pedidoService.adicionarItensPedido(
+      itemComQuantidade.item,
+      itemComQuantidade.quantidade
+    );
+  }
 }

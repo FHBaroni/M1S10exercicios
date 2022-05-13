@@ -3,6 +3,7 @@
     *ngFor="let i of listaComidas"
     [item]="i"
     (adicionaAoPedido)="adicionarComida($event)"
+    (adicionaItensAoPedido)="adicionarComidaComQuantidade($event)"
   >
   </NGF-item-cardapio>
 </div>

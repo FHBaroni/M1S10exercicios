@@ -23,4 +23,11 @@ export class BebidaListaComponent implements OnInit {
   adiciconarBebida(bebida: bebidas) {
     this.pedidoService.adicionarItemPedido(bebida);
   }
+
+  adicionarBebidaComQuantidade(itemComQuantidade: any) {
+    this.pedidoService.adicionarItensPedido(
+      itemComQuantidade.item,
+      itemComQuantidade.quantidade
+    );
+  }
 }

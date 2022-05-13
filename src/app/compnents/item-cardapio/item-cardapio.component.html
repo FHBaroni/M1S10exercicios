@@ -18,6 +18,17 @@
       >
         Adicionar ao pedido
       </button>
+      <button
+        type="button"
+        class="w-100 btn btn-lg btn-outline-primary"
+        (click)="adicionaritensAoPedido()"
+      >
+        Adicionar itens
+      </button>
+      <div class="row">
+        <button (click)="diminuirQuantidade()">-</button>{{ quantidade
+        }}<button (click)="aumentarQuantidade()">+</button>
+      </div>
     </div>
   </div>
 </div>

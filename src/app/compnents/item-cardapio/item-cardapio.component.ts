@@ -8,10 +8,27 @@ import { comidas } from 'src/app/models/comidas.models';
   styleUrls: ['./item-cardapio.component.scss'],
 })
 export class ItemCardapioComponent {
-  @Input() item?: comidas | bebidas;
+  quantidade = 0;
 
+  @Input() item?: comidas | bebidas;
   @Output() adicionaAoPedido = new EventEmitter<comidas | bebidas>();
+  @Output() adicionaItensAoPedido = new EventEmitter();
+
   adicionarAoPedido() {
     this.adicionaAoPedido.emit(this.item);
+  }
+
+  adicionaritensAoPedido() {
+    const itens = {
+      item: this.item,
+      quantidade: this.quantidade,
+    };
+    this.adicionaItensAoPedido.emit(itens);
+  }
+  aumentarQuantidade() {
+    this.quantidade += 1;
+  }
+  diminuirQuantidade() {
+    this.quantidade -= 1;
   }
 }
