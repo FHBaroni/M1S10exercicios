@@ -1,4 +1,4 @@
-<div class="row row-cols-7 row-cols-md-5 row-cols-sm-3 mb-3 text-center">
+<div class="row row-cols-lg-7 row-cols-md-5 row-cols-sm-3 text-center">
   <div *ngIf="listaItensPedido.length === 0" clas="row">
     <p>Não há pedidos adicionados</p>
   </div>
@@ -16,14 +16,14 @@
         R${{ item?.valor }}<small class="text-muted fw-light"></small>
       </h1>
 
-      <!-- <button
-          onclick="alert('Adicionado')"
-          type="button"
-          class="w-100 btn btn-lg btn-outline-primary"
-          (click)="adicionarAoPedido()"
-        >
-          Adicionar ao pedido
-        </button> -->
+      <button
+        onclick="alert('Removido do pedido')"
+        type="button"
+        class="w-100 btn btn-lg btn-outline-primary"
+        (click)="removerItem(item)"
+      >
+        Remover
+      </button>
     </div>
   </div>
 </div>
