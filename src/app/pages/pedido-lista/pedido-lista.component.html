@@ -1,3 +1,15 @@
+<div *ngIf="listaItensPedido.length !== 0">
+  <div class="col-5">
+    <button
+      type="button"
+      class="w-200 btn btn-lg btn-outline-primary my-3"
+      (click)="removerTudo()"
+    >
+      Remover tudo
+    </button>
+  </div>
+</div>
+
 <div class="row row-cols-lg-7 row-cols-md-5 row-cols-sm-3 text-center">
   <div *ngIf="listaItensPedido.length === 0" clas="row">
     <p>Não há pedidos adicionados</p>
@@ -7,7 +19,7 @@
     class="card mb-4 rounded-3 shadow-sm"
     *ngFor="let item of listaItensPedido"
   >
-    <div class="card-header py-3">
+    <div>
       <h4 class="my-0 fw-normal">{{ item?.titulo }}</h4>
     </div>
     <div class="card-body">

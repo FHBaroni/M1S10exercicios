@@ -13,9 +13,16 @@ export class PedidoListaComponent implements OnInit {
   constructor(private pedidoService: PedidoService) {}
 
   ngOnInit(): void {
+    this.buscarItensPedido();
+  }
+  buscarItensPedido() {
     this.listaItensPedido = this.pedidoService.buscarItensPedido();
   }
   removerItem(item: comidas | bebidas) {
     this.pedidoService.removerItemPedido(item.id);
+  }
+  removerTudo() {
+    this.pedidoService.limparPedido();
+    this.buscarItensPedido();
   }
 }
