@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { bebidas } from 'src/app/models/bebidas.models';
+import bebidas from 'src/app/models/bebidas.models';
 import { cards } from 'src/app/models/N_food.models';
 import { bebida_mock } from 'src/app/utils/bebida-mock';
 import { food_mock } from 'src/app/utils/food-mock';

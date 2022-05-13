@@ -1,8 +1,6 @@
-import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
-import { bebidas } from 'src/app/models/bebidas.models';
-import { bebida_mock } from 'src/app/utils/bebida-mock';
-
+import bebidas from 'src/app/models/bebidas.models';
+import { BebidaService } from 'src/app/services/bebida.service';
 @Component({
   selector: 'NGF-bebida-lista',
   templateUrl: './bebida-lista.component.html',
@@ -10,13 +8,11 @@ import { bebida_mock } from 'src/app/utils/bebida-mock';
 })
 export class BebidaListaComponent implements OnInit {
   listaBebidas: bebidas[] = [];
-  constructor(private http: HttpClient) {}
+  constructor(private bebidaService: BebidaService) {}
 
   ngOnInit(): void {
-    this.http
-      .get<bebidas[]>('http://localhost:3000/bebidas')
-      .subscribe((resultado) => {
-        this.listaBebidas = resultado;
-      });
+    this.bebidaService.devolverBebidas().subscribe((resultado: bebidas[]) => {
+      this.listaBebidas = resultado;
+    });
   }
 }
