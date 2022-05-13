@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import bebidas from 'src/app/models/bebidas.models';
 import { comidas } from 'src/app/models/comidas.models';
 
@@ -7,8 +7,11 @@ import { comidas } from 'src/app/models/comidas.models';
   templateUrl: './item-cardapio.component.html',
   styleUrls: ['./item-cardapio.component.scss'],
 })
-export class ItemCardapioComponent implements OnInit {
+export class ItemCardapioComponent {
   @Input() item?: comidas | bebidas;
 
-  ngOnInit(): void {}
+  @Output() adicionaAoPedido = new EventEmitter<comidas | bebidas>();
+  adicionarAoPedido() {
+    this.adicionaAoPedido.emit(this.item);
+  }
 }

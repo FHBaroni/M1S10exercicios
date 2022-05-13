@@ -3,5 +3,5 @@ export default interface bebidas {
   imagem: string;
   descricao: string;
   valor: string;
-  id: string;
+  id: any;
 }

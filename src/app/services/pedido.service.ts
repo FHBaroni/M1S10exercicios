@@ -6,7 +6,8 @@ import { comidas } from '../models/comidas.models';
   providedIn: 'root',
 })
 export class PedidoService {
-  itensPedidoLista: comidas[] | bebidas[];
+  itensPedidoLista: comidas[] | bebidas[] = [];
+
   constructor() {}
 
   getTotalItensPedido(): number {
@@ -15,6 +16,7 @@ export class PedidoService {
 
   adicionarItemPedido(item: comidas | bebidas) {
     this.itensPedidoLista.push(item);
+    console.log('itensPedidoLista', this.itensPedidoLista);
   }
 
   limparPedido() {

@@ -7,6 +7,7 @@ export const comida_mock: comidas[] = [
     descricao:
       'Casamentiss faiz malandris se pirulitá.Mauris nec dolor in eros commodo tempor. Aenean aliquam molestie leo, vitae iaculis nisl.Si u mundo tá muito paradis? Toma um mé que o mundo vai girarzis!',
     valor: '20',
+    id: '1',
   },
   {
     titulo: 'Salada da casa',
@@ -14,6 +15,7 @@ export const comida_mock: comidas[] = [
     descricao:
       'Suco de cevadiss deixa as pessoas mais interessantis.Admodum accumsan disputationi eu sit. Vide electram sadipscing et per..',
     valor: '23',
+    id: '2',
   },
   {
     titulo: 'Gâteau aux fraises',
@@ -21,6 +23,7 @@ export const comida_mock: comidas[] = [
     descricao:
       'Que um alcoolatra anonimis.Paisis, filhis, espiritis santis.Praesent malesuada urna nisi, quis volutpat erat hendrerit non. Nam vulputate dapibus.',
     valor: '19',
+    id: '3',
   },
   {
     titulo: 'Green hamburger',
@@ -28,5 +31,6 @@ export const comida_mock: comidas[] = [
     descricao:
       'Praesent malesuada urna nisi, quis volutpat erat hendrerit non. Nam vulputate dapibus.Todo mundo vê os porris que eu tomo, mas ninguém vê os tombis que eu levo!',
     valor: '32',
+    id: '4',
   },
 ];
