@@ -13,21 +13,30 @@
       </ul>
       <button
         type="button"
-        class="w-100 btn btn-lg btn-outline-primary"
+        class="w-100 btn btn-lg btn-outline-success"
+        (click)="alertaAdicionado()"
         (click)="adicionarAoPedido()"
       >
         Adicionar ao pedido
       </button>
-      <button
-        type="button"
-        class="w-100 btn btn-lg btn-outline-primary"
-        (click)="adicionaritensAoPedido()"
-      >
-        Adicionar itens
-      </button>
+
       <div class="row">
-        <button (click)="diminuirQuantidade()">-</button>{{ quantidade
-        }}<button (click)="aumentarQuantidade()">+</button>
+        <div class="col">
+          <button class="btn mb-0 text-success" (click)="diminuirQuantidade()">
+            -</button
+          >{{ quantidade }}
+          <button class="btn mb-0 text-success" (click)="aumentarQuantidade()">
+            +
+          </button>
+        </div>
+        <button
+          type="button"
+          class="w-500 btn btn-lg btn-outline-success"
+          (click)="alertaAdicionado()"
+          (click)="adicionaritensAoPedido()"
+        >
+          Adicionar {{ quantidade }} unidades ao Pedido
+        </button>
       </div>
     </div>
   </div>

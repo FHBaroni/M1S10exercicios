@@ -1,6 +1,7 @@
 import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import bebidas from 'src/app/models/bebidas.models';
 import { comidas } from 'src/app/models/comidas.models';
+import Swal from 'sweetalert2';
 
 @Component({
   selector: 'NGF-item-cardapio',
@@ -30,5 +31,14 @@ export class ItemCardapioComponent {
   }
   diminuirQuantidade() {
     this.quantidade -= 1;
+  }
+  alertaAdicionado() {
+    Swal.fire({
+      position: 'top-end',
+      icon: 'success',
+      title: 'Adicionado ao pedido',
+      showConfirmButton: false,
+      timer: 1500,
+    });
   }
 }

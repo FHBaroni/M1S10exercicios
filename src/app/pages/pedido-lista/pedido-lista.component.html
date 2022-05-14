@@ -1,4 +1,4 @@
-<div *ngIf="listaItensPedido.length !== 0">
+<div *ngIf="listaItensPedido.length > 0">
   <div class="col-5">
     <button
       type="button"
@@ -29,7 +29,7 @@
       </h1>
 
       <button
-        onclick="alert('Removido do pedido')"
+        (click)="alertaRemove()"
         type="button"
         class="w-100 btn btn-lg btn-outline-primary"
         (click)="removerItem(item)"
